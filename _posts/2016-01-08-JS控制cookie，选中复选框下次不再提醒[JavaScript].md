@@ -1,6 +1,7 @@
 ---
 title: JS控制cookie，选中复选框下次不再提醒
 date: 2016-01-08
+tags: [JavaScript]
 ---
 
 应用场景：
