@@ -1,3 +1,8 @@
+---
+title: 商城链接GET参数运用
+date: 2016-08-25
+---
+
 ![2016082523067mall.gif](https://ohv0hyr4v.qnssl.com/2016082523067mall.gif)
 
 <!-- more -->

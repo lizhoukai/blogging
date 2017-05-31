@@ -1,3 +1,8 @@
+---
+title: JS查找数组中是否存在某个元素
+date: 2016-04-12
+---
+
 ## 1.函数方法定义
 ```js
 function contains(arr, obj) {

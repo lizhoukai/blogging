@@ -1,7 +1,8 @@
-title: new Date()格式问题
-date: 2015-10-25 22:50:30
-tags: [JavaScript]
 ---
+title: new Date()格式问题
+date: 2015-10-25
+---
+
 最近遇到一个问题，查不到原因。卡在那里，所幸在`stackoverflow`找到了答案；
 后端提供的接口，json其中一条格式是这样的 `"start_date": "2015-10-10 19:11"`
 
