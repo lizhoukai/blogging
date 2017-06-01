@@ -1,7 +1,7 @@
 ---
 title: 理解作用域
 date: 2015-11-01
-tags: [JavaScript]
+tags: JavaScript
 ---
 
 ## 什么是作用域

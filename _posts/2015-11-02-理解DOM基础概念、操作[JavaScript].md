@@ -1,7 +1,7 @@
 ---
 title: 理解DOM基础概念、操作
 date: 2015-11-02
-tags: [JavaScript]
+tags: JavaScript
 ---
 
 # DOM基础概念、操作

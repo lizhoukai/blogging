@@ -1,7 +1,7 @@
 ---
 title: pc网站微信登录开发
 date: 2015-11-25
-tags: [JavaScript]
+tags: JavaScript
 ---
 
 网站需要接入一个微信登录的功能。于是知乎了下，了解了下原理

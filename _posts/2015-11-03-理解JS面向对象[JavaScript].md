@@ -1,7 +1,7 @@
 ---
 title: 理解JS面向对象
 date: 2015-11-03
-tags: [JavaScript]
+tags: JavaScript
 ---
 
 # 什么是面向对象编程

@@ -1,7 +1,7 @@
 ---
 title: 理解数据类型和类型转换
 date: 2015-11-01
-tags: [JavaScript]
+tags: JavaScript
 ---
 
 ## 数据类型

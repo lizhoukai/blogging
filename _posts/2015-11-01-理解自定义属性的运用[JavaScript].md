@@ -1,7 +1,7 @@
 ---
 title: 理解自定义属性的运用
 date: 2015-11-01
-tags: [JavaScript]
+tags: JavaScript
 ---
 
 ## 自定义属性的读写操作

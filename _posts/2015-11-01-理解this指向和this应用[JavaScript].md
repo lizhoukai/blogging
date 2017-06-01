@@ -1,7 +1,7 @@
 ---
 title: 理解this指向和this应用
 date: 2015-11-01
-tags: [JavaScript]
+tags: JavaScript
 ---
 
 - `window`是js中的”老大“

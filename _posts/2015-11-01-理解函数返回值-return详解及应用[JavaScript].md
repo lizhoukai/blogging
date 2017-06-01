@@ -1,7 +1,7 @@
 ---
 title: 理解函数返回值-return详解及应用
 date: 2015-11-01
-tags: [JavaScript]
+tags: JavaScript
 ---
 
 - `return` 返回值：函数名+括号（例如fn1())就相当于得到了该函数里面return后面的值

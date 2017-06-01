@@ -1,7 +1,7 @@
 ---
 title: new Date()格式问题
 date: 2015-10-25
-tags: [JavaScript]
+tags: JavaScript
 ---
 
 最近遇到一个问题，查不到原因。卡在那里，所幸在`stackoverflow`找到了答案；
