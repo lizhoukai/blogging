@@ -4,8 +4,7 @@ date: 2015-11-02
 tags: JavaScript
 ---
 
-# DOM基础概念、操作
-## DOM的概念及节点类型
+# DOM的概念及节点类型
 
 `DOM`：`ocument Object Model` 文档对象模型
 
@@ -17,7 +16,7 @@ tags: JavaScript
 
 <!-- more -->
 
-### DOM节点
+## DOM节点
 
 - `childNodes \ children`
     - 获取第一级子元素
@@ -27,7 +26,7 @@ tags: JavaScript
 - `lastChild \ lastElementChild`
     - 获取子元素里的最后一个
 
-### childNodes
+## childNodes
 元素`.childNodes`：只读属性 子节点列表集合
 
 `childNodes`至包含一级子节点，不包含后辈孙级以下的节点
@@ -66,7 +65,7 @@ for (var i=0; i<oUl.childNodes.length; i++){
 document.nodeName // "#document"
 document.nodeType // 9
 ```
-### children
+## children
 元素`.children`：只读 属性 子节点列表集合
 - 标准下： 只包含元素类型的节点，并且包含非法嵌套的子节点
 - 非标准下：只包含元素类型的节点，IE7及以下不包含非法嵌套的子节点
@@ -79,7 +78,7 @@ for (var i=0; i<oUl.children.length; i++){
 }
 ```
 
-### nodeType
+## nodeType
 元素`.nodeType`：只读 属性 当前元素的节点类型
 常用的节点类型包括：元素节点、文本节点、属性节点：
 
@@ -119,22 +118,22 @@ alert(oUl.attributes.length); //弹出2
 alert(oUl.attributes[0].value); //弹出'ul1'
 ```
 
-### attributes
+## attributes
 元素`.attributes`：只读 属性 属性列表集合
 
 具体代码可以查看`NodeType`中js代码中alert的部分。
 
 ----
 
-## 子节点和兄弟节点的操作
-### firstChild
+# 子节点和兄弟节点的操作
+## firstChild
 
 元素`.firstChild`：只读 属性 第一个子节点
 
 - 标准下：`firstChild`会包含文本类型的节点
 - 非标准下： 只包含元素节点
 
-### firstElementChild
+## firstElementChild
 元素`.firstElementChild`：只读 属性
 
 - 标准下获取第一个元素类型节点的子节点
@@ -178,12 +177,12 @@ if(oFirst){
 oUl.children[0].style.background = 'red';
 ```
 
-### lastChild、lastElementChild
+## lastChild、lastElementChild
 元素`.lastChild` || 元素`.lastElementChild` 最后一个子节点
 
 原理与`firstChild` || `firstElementChild`相似，不再赘述
 
-### nextSibling、previousSibling
+## nextSibling、previousSibling
 
 元素`.nextSibling` || 元素`.nextElementSibling` 下一个兄弟节点
 
@@ -191,8 +190,8 @@ oUl.children[0].style.background = 'red';
 
 ----
 
-## 父节点
-### parentNode
+# 父节点
+## parentNode
 
 元素`.parentNode`： 只读 属性 只有一个 当前节点的父级节点
 
@@ -215,7 +214,7 @@ for (var i=0; i<oA.length; i++){
 ```
 
 
-### offsetParent
+## offsetParent
 
 ```html
 <head>
@@ -252,8 +251,8 @@ alert(oDiv3.offsetParent.id); //弹出body1
 
 ----
 
-## 元素位置宽高
-### offsetLeft、offsetTop
+# 元素位置宽高
+## offsetLeft、offsetTop
 
 元素`.offsetLeft\offsetTop`：只读 属性 当前元素到定位父级的距离（偏移值）
 
@@ -277,7 +276,7 @@ IE7及以下：
     - 如果自己有定位，那么就是到定位父级的距离
     - 其他：到定位父级的距离
 
-### offsetWidth、offsetHeight
+## offsetWidth、offsetHeight
 
 - 元素`.style.width`：样式宽：就是给元素的style中设置的width的值，带单位
 - `clientWidth`：可视区宽：样式宽 + padding，不带单位
@@ -287,7 +286,7 @@ IE7及以下：
 
 ----
 
-## getPos()
+# getPos()
 ```html
 <head>
     <style>
@@ -336,13 +335,13 @@ function getPos(obj){
 
 ----
 
-## 操作元素属性的多种方式
-### 点的形式和中括号形式
+# 操作元素属性的多种方式
+## 点的形式和中括号形式
 
 - 通过.点的形式：`oText.value`
 - 通过中括号[]的形式：`oText['value']` （当属性名用变量来表示的时候，用中括号）
 
-### getAttribute、setAttribute、removeAttribute
+## getAttribute、setAttribute、removeAttribute
 
 - 元素`.getAttribute`(属性名称); 方法 获取指定元素的指定属性的值
 - 元素`.setAttribute`(属性名称, 属性值); 方法 给指定元素指定的属性设置值
@@ -356,8 +355,8 @@ function getPos(obj){
 
 ----
 
-## 元素的创建操作
-### document.createElement()
+# 元素的创建操作
+## document.createElement()
 
 `document.createElement(标签名);`
 
@@ -365,13 +364,13 @@ function getPos(obj){
 - 不会直接显示在页面当中
 - 前面必须是`document`，不能是其他
 
-### appendChild()
+## appendChild()
 父级`.appendChild(要追加的元素)`
 
 - 方法
 - 在指定父级子节点最后一个后面追加子元素
 
-### insertBefore()
+## insertBefore()
 父级`.insertBefore(新的元素，指定的被插入的元素)`;
 
 - 方法
@@ -409,16 +408,16 @@ oBtn.onclick = function() {
 }
 ```
 
-### removeChild()
+## removeChild()
 父级`.removeChild(要删除的节点);`
 
-### replaceChild()
+## replaceChild()
 父级`.replaceChild(新节点、被替换节点)` 替换子节点
 
 `appendChild`，`insertBefore`，`replaceChild`可以操作静态节点，也可以操作动态生成的节点。
 
 # DOM、BOM相关方法及属性
-## getElementsByClassName
+# getElementsByClassName
 
 ```js
 function getElementsByClassName (parent, tagName, className){
@@ -445,7 +444,7 @@ function getElementsByClassName (parent, tagName, className){
 
 ----
 
-## addClass、removeClass
+# addClass、removeClass
 ```js
 function addClass(obj, className){
     if(obj.className == ''){
@@ -482,7 +481,7 @@ function arrIndexOf(arr, v){
 
 ----
 
-## 表格操作
+# 表格操作
 ```html
 <table width="100%" id="tab1" border="1px">
     <tr>
@@ -540,7 +539,7 @@ alert(oTab.tBodies[0].rows[1].cells[1].innerHTML); //弹出小美，更为直观
 
 
 
-### 表格属性
+## 表格属性
 
 - `tHead`：表格头（DOM中规定thead只能有一个）
 - `tBodies`：表格正文（DOM中规定tbody可以有多个）
@@ -548,7 +547,7 @@ alert(oTab.tBodies[0].rows[1].cells[1].innerHTML); //弹出小美，更为直观
 - `rows`：行
 - `cells`：列
 
-### 表格数据的操作
+## 表格数据的操作
 ```js
 <table width="100%" id="tab1" border="1px">
     <thead>
@@ -619,7 +618,7 @@ for(var i=0; i<data.length; i++){ //表格的创建
 
 ----
 
-## 表单操作
+# 表单操作
 ```html
 <form id="form1">
     <input type="text" name="text1" />
@@ -679,10 +678,10 @@ oForm.btn.onclick = function(){
 }
 ```
 
-### name
+## name
 - `name`：表单中可以通过name来获取元素：父级.name （该方法浏览器都兼容）
 
-### onchange事件
+## onchange事件
 - `onchange`事件：当值发生改变的时候触发
     - `text`：当光标离开的时候，如果内容有变化，就触发
     - `radio/checkbox`：
@@ -692,8 +691,8 @@ oForm.btn.onclick = function(){
 
 ----
 
-## 表单事件
-### onsubmit
+# 表单事件
+## onsubmit
 
 - `onsubmit`：事件 当提交表单的时候触发
 - `submit()`：方法 提交表单
@@ -724,7 +723,7 @@ setTimeout(function(){
 */
 ```
 
-### onreset
+## onreset
 注意“重置”的概念：不是清空，而是重置为默认值
 
 - `onreset`：事件 当提交表单重置的时候触发
@@ -746,19 +745,19 @@ oForm.reset = function(){
 
 ----
 
-## BOM
+# BOM
 `BOM`：** Browser Object Model ** 浏览器对象模型
 
 `BOM`中大部分是对`window`对象的操作
 
-### open
+## open
 
 - `open`(页面的地址url, 打开的方式)：方法 打开一个新的窗口（页面） 应该是`window.open()`，但是JS中默认前面是`window`的话，`window`可以不写。最常用的是两个参数：url和打开方式
 如果url为空，则默认打开一个空白页面
     - 如果打开方式为空，则默认为新窗口方式
     - `open()方`法的返回值：返回新打开的窗口的`window`对象
 
-### close
+## close
 - `close()`：方法 关闭窗口 有兼容性问题
     - `firefox`：默认无法关闭
     - `chrome`：默认直接关闭
@@ -792,7 +791,7 @@ aInput[2].onclick = function(){
 }
 ```
 
-### window.navigator.userAgent
+## window.navigator.userAgent
 
 `window.navigator.userAgent` => 浏览器信息
 
@@ -806,7 +805,7 @@ if(window.navigator.userAgent.indexOf('MSIE') != -1){
     alert('我不是ie');
 }
 
-### window.location
+## window.location
 `window:location`：浏览器地址栏信息
 
 `window.location` 看似是一串字符串，其实是一个对象。
@@ -817,18 +816,18 @@ if(window.navigator.userAgent.indexOf('MSIE') != -1){
 
 ----
 
-## 文档宽高及窗口事件
-### 可视区尺寸
+# 文档宽高及窗口事件
+## 可视区尺寸
 
 - `document.documentElement.clientWidth` //从文档对象的文档元素上取clientWidth
 - `document.documentElement.clientHeight` //从文档对象的文档元素上取clientHeight
 
-###  滚动距离
+##  滚动距离
 
 - `document.body.scrollTop/scrollLeft` //scrollTop是可视区顶部到整个页面顶部的距离（就是滚动条滚动距离）；想要得到谁的滚动距离，scrollTop和scrollLeft的前面就写哪个元素
 - `document.documentElement.scrollTop/scrollLeft`
 
-### 兼容性问题
+## 兼容性问题
 
 - chrome浏览器，认为滚动距离是在`body`上的
 - 其他浏览器，认为滚动距离是`documentElement`上的
@@ -839,21 +838,21 @@ if(window.navigator.userAgent.indexOf('MSIE') != -1){
 var scrollTop = document.documentElement.scrollTop || document.body.scrollTop
 ```
 
-### 内容高度
+## 内容高度
 - `document.body.scrollHeight`
 - 元素`.scrollHeight/scrollWidth`
 
-### 文档高度
+## 文档高度
 - `document.documentElement.offsetHeight`
 - `document.body.offsetHeight`
 
-### 兼容性问题
+## 兼容性问题
 - 在`IE`下，文档的高`document.documentElement.offsetHeight`被认为是可视区的高
 - 其他浏览器，文档的高并不是可视区的高
 
 在页面中取文档的高，请先在CSS中将`body`的margin去掉，然后用`document.body.offsetHeight`来取文档元素的高，因为这时候文档的高与`body`的高没有差别。
 
-### onscroll
+## onscroll
 - `onscroll`：当滚动条滚动的时候触发
 
 以一定的时间间隔来计算的
@@ -865,7 +864,7 @@ window.onscroll = function(){
 }
 ```
 
-### onresize
+## onresize
 
 `onresize`：当窗口大小发生改变的时候触发
 
@@ -881,7 +880,7 @@ window.onresize = function(){
 ----
 
 # Event事件详解
-## 焦点事件
+# 焦点事件
 
 焦点：使浏览器能够区分用户输入的对象。当一个元素有焦点的时候，那么它就可以接收用户的输入。
 
@@ -930,7 +929,7 @@ oBtn.onclick = function(){
 
 ----
 
-## Event对象
+# Event对象
 
 - 用来获取事件的详细信息：鼠标位置、键盘按键
 - `Event`对象的兼容：`ev = ev || window.event`
@@ -950,7 +949,7 @@ fn1(); //不是事件调用的函数，因此这时候event没有内容，显示
 document.onclick = fn1; //fn1是事件调用的函数，所以event有内容 这种写法在ff下是弹不出东西的
 ```
 
-### event对象的兼容性问题
+## event对象的兼容性问题
 - `ie/chrome`：`event`是一个内置的全局对象
 - 标准下（包括ff）：事件对象是通过事件函数的第一个参数传入（如果一个函数是被事件调用的，那么，这个函数定义的第一个参数就是事件对象）
 
@@ -975,7 +974,7 @@ function fn1(ev) {
 document.onclick = fn1; //在标准浏览器和非标准浏览器下，都能够正确弹出事件对象
 ```
 
-### clientX \ clientY
+## clientX \ clientY
 
 - clientX \ clientY：当一个事件发生的时候，鼠标到页面可视区的距离
 
@@ -1007,7 +1006,7 @@ document.onmousemove = function(){
 
 ----
 
-## 事件流
+# 事件流
 
 - 事件冒泡
     - 取消冒泡：`ev.cancelBubble = true`
@@ -1015,7 +1014,7 @@ document.onmousemove = function(){
 - 事件捕获
     - 非标准IE下是没有的，在绑定事件中，标准下是有的
 
-### 事件冒泡
+## 事件冒泡
 
 **事件冒泡**：当一个元素接收到事件的时候，会把它接收到的事件传播给它的父级，一直到顶层window，这也被称为js中的事件冒泡机制。
 
@@ -1080,7 +1079,7 @@ oDiv.onmouseout = function(){
 
 注意：上面的案例中，事件都是加给div1的，并没有加给div2。但是，当鼠标从div1移入或移出时，都可以触发设置在div2上的事件函数，因此大大地减少了代码量。
 
-### 绑定事件的第二种形式
+## 绑定事件的第二种形式
 
 ** 给一个对象绑定一个事件处理函数的第一种形式 **
 
@@ -1193,7 +1192,7 @@ oDiv1.addEventListener('click', function(){
 //弹出顺序是：3 -> 2 -> 1
 ```
 
-### 事件绑定函数的取消
+## 事件绑定函数的取消
 
 ** 取消普通形式的事件绑定函数： **
 ```js
@@ -1209,8 +1208,8 @@ IE：obj.detachEvent(事件名称, 事件函数);
 标准：obj.removeEventListener(事件名称, 事件函数, 是否捕获 );
 ```
 
-### 键盘事件
-#### onkeydown
+## 键盘事件
+### onkeydown
 
 `onkeydown`：当键盘按键按下的时候触发
 
@@ -1236,7 +1235,7 @@ document.onclick = function(ev){
 }
 ```
 
-#### onkeyup
+### onkeyup
 `onkeyup`：当键盘按键抬起的时候触发
 
 > 仿QQ留言本
@@ -1303,7 +1302,7 @@ document.onkeydown = function(ev){
 
 - 不是所有元素都能够接收键盘事件，能够响应用户输入的元素才可以。能够接收焦点的元素就能够接收键盘事件。
 
-#### 事件默认行为
+### 事件默认行为
 
 ** 事件默认行为 **：当一个事件发生的时候，浏览器自己会默认做的事情
 阻止事件默认行为的步骤：
@@ -1357,7 +1356,7 @@ document.onclick = function(){
 ----
 
 # 事件深入应用
-## 拖拽的原理
+# 拖拽的原理
 
 > 简单拖拽
 
@@ -1390,7 +1389,7 @@ oDiv.onmousedown = function(ev){
 
 ----
 
-## 拖拽的问题以及解决办法
+# 拖拽的问题以及解决办法
 
 1. 拖拽的时候，如果有文字被选中，会产生问题。
     - 原因：当鼠标按下的时候，如果页面中有文字被选中，会触发浏览器的默认拖拽文字的效果。
@@ -1453,7 +1452,7 @@ oDiv.onmousedown = function(ev){
 
 ----
 
-## 拖拽的封装和应用扩展-限制范围、磁性吸附
+# 拖拽的封装和应用扩展-限制范围、磁性吸附
 ```js
 function drag(obj){
     obj.onmousedown = function(ev){
@@ -1562,7 +1561,7 @@ function drag(obj){
 ----
 
 
-## 碰撞检测
+# 碰撞检测
 ```html
 <div id="div1"></div>
 <img id="img1" url="1.jpg" />
@@ -1617,7 +1616,7 @@ function drag(obj){
 
 ----
 
-## 拖拽改变层大小
+# 拖拽改变层大小
 
 ```html
 <div id="div1"></div>
@@ -1660,7 +1659,7 @@ oDiv.onmousedown = function(ev){
 
 ----
 
-## 滚动条的模拟和扩展运用
+# 滚动条的模拟和扩展运用
 ```html
 <div id="div1">
     <div id="div2></div>
@@ -1748,7 +1747,7 @@ oDiv2.onmousedown = function(ev){
 ----
 
 # 鼠标滚轮和COOKIE
-## 鼠标滚轮事件
+# 鼠标滚轮事件
 
 - IE/chrome: onmousewheel
     - event.wheelDelta 数字类型
@@ -1802,7 +1801,7 @@ function fn(ev){
 
 ----
 
-## cookie
+# cookie
 - `cookie`：用来存储数据，当用户访问了某个网站（网页）的时候，我们就可以通过`cookie`来向访问者的电脑上存储数据。
     - 不同的浏览器存放的`cookie`位置不一样，也是不能通用的
     - `cookie`的存储是以域名的形式进行区分的

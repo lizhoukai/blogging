@@ -4,7 +4,7 @@ date: 2015-11-01
 tags: JavaScript
 ---
 
-## 数据类型
+# 数据类型
 - HTML标签类型：
     - block
     - inline
@@ -31,10 +31,10 @@ tags: JavaScript
 
 ----
 
-## 数据类型转换
+# 数据类型转换
   把字符串转成数字的方法：
 
-### Number()
+## Number()
 ```js
 var a = '100';
 alert(a + 100); //'100100'
@@ -93,7 +93,7 @@ var q = '100px';
 alert(Number(q)); // NaN
 ```
 
-### parseInt与parseFloat
+## parseInt与parseFloat
 
 ```js
 var a = '100px';
@@ -147,7 +147,7 @@ if(parseInt(num) == parseFloat(num)) {
 ----
 
 
-## 隐式类型转换
+# 隐式类型转换
 显式类型转换（强制类型转换）：
 - Number();
 - parseInt();
@@ -183,7 +183,7 @@ alert('2' === 2); //false 三个等号不仅判断值，还会先判断两者的
 
 ----
 
-## isNaN应用实例
+# isNaN应用实例
 `NaN`: (not a number)。`NaN`是个不是数字的数字类型。所有的数字都是数字类型，但不是所有的数字类型都是数字。
 - `NaN`是个数字类型，但它不是个数字。
 - 一旦写程序中出现了`NaN`，肯定说明进行了非法的运算操作。

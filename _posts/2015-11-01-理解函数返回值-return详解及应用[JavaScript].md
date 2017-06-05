@@ -11,7 +11,7 @@ tags: JavaScript
 
 <!-- more -->
 
-## return实例
+# return实例
 
 ```js
 alert fn1();
@@ -43,7 +43,7 @@ function fn1(){
 //此时弹出的是10。
 ```
 
-## arguments
+# arguments
 
 `fn1(1, 2, 3)` //实参——实际传递的参数
 
@@ -92,7 +92,7 @@ fn2(a);
 alert(a); //弹出1
 ```
 
-## currentStyle与getComputedStyle应用
+# currentStyle与getComputedStyle应用
 - `getComputedStyle`获取的是计算机（浏览器）计算后的样式，但是不兼容IE6、7、8
 - `currentStyle`方法兼容IE6、7、8，但是不兼容标准浏览器
 
